@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/modelos/Autor.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1723657175622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723657226312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,8 @@\n     nome: string\r\n     idade: number\r\n \r\n     constructor(autor: TAutor) {\r\n-\r\n+        this.nome = autor.nome\r\n+        this.idade = autor.idade\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723657277079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     idade: number\r\n }\r\n \r\n export default class Autor {\r\n-    id: string\r\n+    readonly id: string\r\n     nome: string\r\n     idade: number\r\n \r\n     constructor(autor: TAutor) {\r\n"
+                },
+                {
+                    "date": 1723657516067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import { v4 as uuidv4 } from 'uuid';\r\n+\r\n type TAutor = {\r\n     nome: string\r\n     idade: number\r\n }\r\n@@ -11,5 +13,10 @@\n     constructor(autor: TAutor) {\r\n         this.nome = autor.nome\r\n         this.idade = autor.idade\r\n     }\r\n+}\r\n+\r\n+private gerarId(): string{\r\n+    return uuidv4()\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723657557392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,14 @@\n     nome: string\r\n     idade: number\r\n \r\n     constructor(autor: TAutor) {\r\n+        this.id = this.gerarId()\r\n         this.nome = autor.nome\r\n         this.idade = autor.idade\r\n     }\r\n-}\r\n \r\n-private gerarId(): string{\r\n-    return uuidv4()\r\n+    private gerarId(): string {\r\n\\ No newline at end of file\n+        return uuidv4()\r\n \r\n-}\n+    }\r\n+}\r\n"
+                }
+            ],
+            "date": 1723657175622,
+            "name": "Commit-0",
+            "content": "type TAutor = {\r\n    nome: string\r\n    idade: number\r\n}\r\n\r\nexport default class Autor {\r\n    id: string\r\n    nome: string\r\n    idade: number\r\n\r\n    constructor(autor: TAutor) {\r\n\r\n    }\r\n}"
+        }
+    ]
+}
