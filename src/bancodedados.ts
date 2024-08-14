@@ -8,4 +8,14 @@ export const autores: Autor[] = [
     // })
 ]
 console.log(autores)
-export const posts: Post[] = []
+export const posts: Post[] = [
+    new Post({
+        titulo: 'Meu primeiro post',
+        descricao: 'Descrição do meu primeiro post',
+        autor: new Autor({
+            nome: 'Lucas',
+            idade: 32
+        })
+
+    })
+]

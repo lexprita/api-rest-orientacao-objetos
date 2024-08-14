@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/controladores/PostControladores.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1723667229219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723667252907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { Request, Response } from \"express\";\r\n+import { autores, posts } from \"../bancodedados\";\r\n+import Autor from \"../modelos/Autor\";\r\n+\r\n+\r\n+\r\n+\r\n+export default class PostControlador {\r\n+\r\n+    listar(req: Request, res: Response) {\r\n+\r\n+    }\r\n+\r\n+    detalhar(req: Request, res: Response) {\r\n+\r\n+    }\r\n+\r\n+    cadastrar(req: Request, res: Response) {\r\n+\r\n+    }\r\n+\r\n+    editar(req: Request, res: Response) {\r\n+\r\n+    }\r\n+    excluir(req: Request, res: Response) {\r\n+\r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723667354122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { Request, Response } from \"express\";\r\n+import { autores, posts } from \"../bancodedados\";\r\n+import Autor from \"../modelos/Autor\";\r\n+\r\n+\r\n+\r\n+\r\n+export default class PostControlador {\r\n+\r\n+    listar(req: Request, res: Response) {\r\n+        return res.json(posts)\r\n+    }\r\n+\r\n+    detalhar(req: Request, res: Response) {\r\n+\r\n+    }\r\n+\r\n+    cadastrar(req: Request, res: Response) {\r\n+\r\n+    }\r\n+\r\n+    editar(req: Request, res: Response) {\r\n+\r\n+    }\r\n+    excluir(req: Request, res: Response) {\r\n+\r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1723667229219,
+            "name": "Commit-0",
+            "content": "import { Request, Response } from \"express\";\r\nimport { autores, posts } from \"../bancodedados\";\r\nimport Autor from \"../modelos/Autor\";\r\n\r\n\r\n\r\n\r\nexport default class PostControlador {\r\n\r\n    listar(req: Request, res: Response) {\r\n\r\n    }\r\n\r\n    detalhar(req: Request, res: Response) {\r\n\r\n    }\r\n\r\n    cadastrar(req: Request, res: Response) {\r\n\r\n    }\r\n\r\n    editar(req: Request, res: Response) {\r\n        // buscar o autor que vai ser editado\r\n        const { id } = req.params\r\n        const { nome, idade } = req.body\r\n\r\n\r\n        if (!nome || !idade) {\r\n\r\n        }\r\n    }\r\n    excluir(req: Request, res: Response) {\r\n\r\n    }"
+        }
+    ]
+}

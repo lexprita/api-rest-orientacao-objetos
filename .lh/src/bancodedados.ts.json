@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1723658359782,
@@ -36,6 +36,10 @@
                 {
                     "date": 1723666556932,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import Autor from \"./modelos/Autor\";\r\n+import Post from \"./modelos/Post\";\r\n+\r\n+export const autores: Autor[] = [\r\n+    // new Autor({\r\n+    //     nome: 'Lucas',\r\n+    //     idade: 32\r\n+    // })\r\n+]\r\n+console.log(autores)\r\n+export const posts: Post[] = []\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723667568212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import Autor from \"./modelos/Autor\";\r\n+import Post from \"./modelos/Post\";\r\n+\r\n+export const autores: Autor[] = [\r\n+    // new Autor({\r\n+    //     nome: 'Lucas',\r\n+    //     idade: 32\r\n+    // })\r\n+]\r\n+console.log(autores)\r\n+export const posts: Post[] = [\r\n+    new Post({\r\n+        titulo: 'Meu primeiro post',\r\n+        descricao: 'Descrição do meu primeiro post',\r\n+        autor: new Autor({\r\n+            nome: 'Lucas',\r\n+            idade: 32\r\n+        })\r\n+\r\n+    })\r\n+]\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1723658359782,
