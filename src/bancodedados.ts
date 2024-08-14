@@ -7,5 +7,5 @@ export const autores: Autor[] = [
         idade: 32
     })
 ]
-
+console.log(autores)
 export const posts: Post[] = []
