@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/bancodedados.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1723658359782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723658423098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import Autor from \"./modelos/Autor\";\r\n+import Post from \"./modelos/Post\";\r\n+\r\n+export const autores: Autor[] = []\r\n+\r\n+export const posts: Post[] = []\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1723658359782,
+            "name": "Commit-0",
+            "content": "import Autor from \"./modelos/Autor\";\r\n\r\nexport const autores: Autor[] = [\r\n    new Autor({\r\n        nome: 'Lucas',\r\n        idade: 32\r\n    }),\r\n    new Autor({\r\n        nome: 'João',\r\n        idade: 33\r\n    })\r\n]\r\nconsole.log(autores)"
+        }
+    ]
+}
