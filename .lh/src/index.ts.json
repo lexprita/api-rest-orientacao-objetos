@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1723638617135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723638652435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n+import 'dotenv/config'\r\n import express from 'express'\r\n \r\n const app = express()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723638675177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+\r\n+import express from 'express'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723638721992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+\r\n+import express from 'express'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\r\n+\r\n+app.get('/', (req, res) => {\r\n+    res.json('OK')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723638733883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+\r\n+import express from 'express'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\r\n+\r\n+app.get('/', (req, res) => {\r\n+    res.json('OK')\r\n+})\r\n+\r\n+app.listen(process.env)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723638776899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+\r\n+import express from 'express'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\r\n+\r\n+app.get('/', (req, res) => {\r\n+    res.json('OK')\r\n+})\r\n+\r\n+app.listen(process.env.PORT)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723639015824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import 'dotenv/config'\r\n+import express from 'express'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\r\n+\r\n+app.get('/', (req, res) => {\r\n+    res.json('OK')\r\n+})\r\n+\r\n+app.listen(process.env.PORT, () => {\r\n+    console.log('Servidor inicializado!')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723639094310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'dotenv/config'\r\n+import 'dotenv/config '\r\n import express from 'express'\r\n \r\n const app = express()\r\n \r\n"
+                }
+            ],
+            "date": 1723638617135,
+            "name": "Commit-0",
+            "content": "import express from 'express'\r\n\r\nconst app = express()"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1723638908578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723638939734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n   \"name\": \"19-api-rest-orientacao-objetos\",\n   \"version\": \"1.0.0\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n-    \"dev\": \"nodemon --exec ts-node ./src/index.ts\"\n+    \"dev\": \"nodemon --exec ts-node ./src/index.ts\",\n+    \"start\": \"node ./dist/index.js\"\n   },\n   \"keywords\": [],\n   \"author\": \"\",\n   \"license\": \"ISC\",\n"
+                },
+                {
+                    "date": 1723638959182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n   \"version\": \"1.0.0\",\n   \"main\": \"index.js\",\n   \"scripts\": {\n     \"dev\": \"nodemon --exec ts-node ./src/index.ts\",\n-    \"start\": \"node ./dist/index.js\"\n+    \"start\": \"node ./dist/index.js\",\n+    \"build\": \"tsc\"\n   },\n   \"keywords\": [],\n   \"author\": \"\",\n   \"license\": \"ISC\",\n"
+                }
+            ],
+            "date": 1723638908578,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"19-api-rest-orientacao-objetos\",\n  \"version\": \"1.0.0\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"dev\": \"nodemon --exec ts-node ./src/index.ts\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"description\": \"\",\n  \"dependencies\": {\n    \"dotenv\": \"^16.4.5\",\n    \"express\": \"^4.19.2\"\n  },\n  \"devDependencies\": {\n    \"@types/express\": \"^4.17.21\",\n    \"nodemon\": \"^3.1.4\",\n    \"ts-node\": \"^10.9.2\",\n    \"typescript\": \"^5.5.4\"\n  }\n}"
+        }
+    ]
+}
