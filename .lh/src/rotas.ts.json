@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1723639260035,
@@ -36,6 +36,18 @@
                 {
                     "date": 1723665245928,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n \r\n const autorControlador = new AutorControlador()\r\n \r\n rotas.get('/autores', autorControlador.listar)\r\n+\r\n rotas.get('/autores/:id', autorControlador.detalhar)\r\n \r\n export default rotas\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723665857977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \r\n const autorControlador = new AutorControlador()\r\n \r\n rotas.get('/autores', autorControlador.listar)\r\n-\r\n rotas.get('/autores/:id', autorControlador.detalhar)\r\n+rotas.post('/autores', autorControlador.cadastrar)\r\n \r\n export default rotas\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723665999811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { Router } from 'express'\r\n+import AutorControlador from './controladores/AutorControlador'\r\n+\r\n+const rotas = Router()\r\n+\r\n+const autorControlador = new AutorControlador()\r\n+\r\n+rotas.get('/autores', autorControlador.listar)\r\n+rotas.get('/autores/:id', autorControlador.detalhar)\r\n+rotas.post('/autores', autorControlador.cadastrar)\r\n+\r\n+export default rotas\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723666428510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import { Router } from 'express'\r\n+import AutorControlador from './controladores/AutorControlador'\r\n+\r\n+const rotas = Router()\r\n+\r\n+const autorControlador = new AutorControlador()\r\n+\r\n+rotas.get('/autores', autorControlador.listar)\r\n+rotas.get('/autores/:id', autorControlador.detalhar)\r\n+rotas.post('/autores', autorControlador.cadastrar)\r\n+rotas.put('/autores/:id', autorControlador.cadastrar)\r\n+\r\n+export default rotas\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1723639260035,
