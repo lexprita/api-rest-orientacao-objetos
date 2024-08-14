@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 22,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1723639260035,
@@ -96,6 +96,10 @@
                 {
                     "date": 1723669002811,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { Router } from 'express'\r\n+import AutorControlador from './controladores/AutorControlador'\r\n+import PostControlador from './controladores/PostControladores'\r\n+\r\n+const rotas = Router()\r\n+\r\n+const autorControlador = new AutorControlador()\r\n+const postControlador = new PostControlador()\r\n+\r\n+rotas.get('/autores', autorControlador.listar)\r\n+rotas.get('/autores/:id', autorControlador.detalhar)\r\n+rotas.post('/autores', autorControlador.cadastrar)\r\n+rotas.put('/autores/:id', autorControlador.editar)\r\n+rotas.delete('/autores/:id', autorControlador.excluir)\r\n+\r\n+rotas.get('/postagens', postControlador.listar)\r\n+rotas.get('/postagens/:id', postControlador.detalhar)\r\n+rotas.post('/postagens', postControlador.cadastrar)\r\n+rotas.patch('/postagens/:id', postControlador.editar)\r\n+\r\n+export default rotas\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723669561641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { Router } from 'express'\r\n+import AutorControlador from './controladores/AutorControlador'\r\n+import PostControlador from './controladores/PostControladores'\r\n+\r\n+const rotas = Router()\r\n+\r\n+const autorControlador = new AutorControlador()\r\n+const postControlador = new PostControlador()\r\n+\r\n+rotas.get('/autores', autorControlador.listar)\r\n+rotas.get('/autores/:id', autorControlador.detalhar)\r\n+rotas.post('/autores', autorControlador.cadastrar)\r\n+rotas.put('/autores/:id', autorControlador.editar)\r\n+rotas.delete('/autores/:id', autorControlador.excluir)\r\n+\r\n+rotas.get('/postagens', postControlador.listar)\r\n+rotas.get('/postagens/:id', postControlador.detalhar)\r\n+rotas.post('/postagens', postControlador.cadastrar)\r\n+rotas.patch('/postagens/:id', postControlador.editar)\r\n+rotas.delete('/postagens/:id', postControlador.excluir)\r\n+\r\n+export default rotas\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1723639260035,
