@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1723639260035,
@@ -48,6 +48,10 @@
                 {
                     "date": 1723666428510,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import { Router } from 'express'\r\n+import AutorControlador from './controladores/AutorControlador'\r\n+\r\n+const rotas = Router()\r\n+\r\n+const autorControlador = new AutorControlador()\r\n+\r\n+rotas.get('/autores', autorControlador.listar)\r\n+rotas.get('/autores/:id', autorControlador.detalhar)\r\n+rotas.post('/autores', autorControlador.cadastrar)\r\n+rotas.put('/autores/:id', autorControlador.cadastrar)\r\n+\r\n+export default rotas\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723666793681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+import { Router } from 'express'\r\n+import AutorControlador from './controladores/AutorControlador'\r\n+\r\n+const rotas = Router()\r\n+\r\n+const autorControlador = new AutorControlador()\r\n+\r\n+rotas.get('/autores', autorControlador.listar)\r\n+rotas.get('/autores/:id', autorControlador.detalhar)\r\n+rotas.post('/autores', autorControlador.cadastrar)\r\n+rotas.put('/autores/:id', autorControlador.editar)\r\n+rotas.delete('/autores/:id', autorControlador.excluir)\r\n+\r\n+export default rotas\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1723639260035,

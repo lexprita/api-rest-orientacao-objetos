@@ -71,4 +71,22 @@ export default class AutorControlador {
 
         return res.status(204).send()
     }
+
+    excluir(req: Request, res: Response) {
+        const { id } = req.params
+
+        const autorIndice = autores.findIndex((elemento) => {
+            return elemento.id === id
+        })
+
+        if (autorIndice === -1) {
+            return res.status(404).json({
+                mensagem: 'Autor não encontrado'
+            })
+        }
+
+        autores.splice(autorIndice, 1)
+
+        return res.status(204).send()
+    }
 }

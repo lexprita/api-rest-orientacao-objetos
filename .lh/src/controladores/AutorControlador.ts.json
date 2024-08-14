@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 21,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1723664193019,
@@ -92,6 +92,18 @@
                 {
                     "date": 1723666391986,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,7 +68,7 @@\n         // alterar o nome e a idade do autor\r\n         autor.nome = nome\r\n         autor.idade = idade\r\n \r\n-        return res.status(204)\r\n+        return res.status(204).send()\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723666699280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,5 +70,21 @@\n         autor.idade = idade\r\n \r\n         return res.status(204).send()\r\n     }\r\n+\r\n+    excluir(req: Request, res: Response) {\r\n+        const { id } = req.params\r\n+\r\n+        const autor = autores.findIndex((elemento) => {\r\n+            return elemento.id === id\r\n+        })\r\n+\r\n+        if (!autor) {\r\n+            return res.status(404).json({\r\n+                mensagem: 'Autor não encontrado'\r\n+            })\r\n+        }\r\n+    }\r\n+\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723666760615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,17 +74,17 @@\n \r\n     excluir(req: Request, res: Response) {\r\n         const { id } = req.params\r\n \r\n-        const autor = autores.findIndex((elemento) => {\r\n+        const autorIndice = autores.findIndex((elemento) => {\r\n             return elemento.id === id\r\n         })\r\n \r\n-        if (!autor) {\r\n+        if (autorIndice === -1) {\r\n             return res.status(404).json({\r\n                 mensagem: 'Autor não encontrado'\r\n             })\r\n         }\r\n+\r\n+        autores.splice(autorIndice, 1)\r\n     }\r\n-\r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723666780563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,6 +85,8 @@\n             })\r\n         }\r\n \r\n         autores.splice(autorIndice, 1)\r\n+\r\n+        return res.status(204).send()\r\n     }\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1723664193019,
