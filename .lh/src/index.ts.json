@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1723638617135,
@@ -36,6 +36,38 @@
                 {
                     "date": 1723639094310,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'dotenv/config'\r\n+import 'dotenv/config '\r\n import express from 'express'\r\n \r\n const app = express()\r\n \r\n"
+                },
+                {
+                    "date": 1723639274668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import 'dotenv/config '\r\n+import express from 'express'\r\n+import rotas from './rotas'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\r\n+\r\n+app.use(rotas)\r\n+\r\n+app.listen(process.env.PORT, () => {\r\n+    console.log('Servidor inicializado!')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723639785576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,67 +5,12 @@\n const app = express()\r\n \r\n app.use(express.json())\r\n \r\n-app.use(rotas)\r\n-\r\n-app.listen(process.env.PORT, () => {\r\n-    console.log('Servidor inicializado!')\r\n-})\n-import 'dotenv/config '\r\n-import express from 'express'\r\n-\r\n-const app = express()\r\n-\r\n-app.use(express.json())\r\n-\r\n-app.get('/', (req, res) => {\r\n+rotas.get('/', (req, res) => {\r\n     res.json('OK')\r\n })\r\n+app.use(rotas)\r\n \r\n app.listen(process.env.PORT, () => {\r\n     console.log('Servidor inicializado!')\r\n-})\n-\r\n-import express from 'express'\r\n-\r\n-const app = express()\r\n-\r\n-app.use(express.json())\r\n-\r\n-app.get('/', (req, res) => {\r\n-    res.json('OK')\r\n-})\r\n-\r\n-app.listen(process.env.PORT)\n-\r\n-import express from 'express'\r\n-\r\n-const app = express()\r\n-\r\n-app.use(express.json())\r\n-\r\n-app.get('/', (req, res) => {\r\n-    res.json('OK')\r\n-})\r\n-\r\n-app.listen(process.env)\n-\r\n-import express from 'express'\r\n-\r\n-const app = express()\r\n-\r\n-app.use(express.json())\r\n-\r\n-app.get('/', (req, res) => {\r\n-    res.json('OK')\r\n-})\n-\r\n-import express from 'express'\r\n-\r\n-const app = express()\r\n-\r\n-app.use(express.json())\n-import 'dotenv/config'\r\n-import express from 'express'\r\n\\ No newline at end of file\n-\r\n-const app = express()\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723639801532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n rotas.get('/', (req, res) => {\r\n     res.json('OK')\r\n })\r\n-app.use(rotas)\r\n+// app.use(rotas)\r\n \r\n app.listen(process.env.PORT, () => {\r\n     console.log('Servidor inicializado!')\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723639808000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import 'dotenv/config '\r\n import express from 'express'\r\n-import rotas from './rotas'\r\n+// import rotas from './rotas'\r\n \r\n const app = express()\r\n \r\n app.use(express.json())\r\n \r\n-rotas.get('/', (req, res) => {\r\n+app.get('/', (req, res) => {\r\n     res.json('OK')\r\n })\r\n // app.use(rotas)\r\n \r\n"
+                },
+                {
+                    "date": 1723639904051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import 'dotenv/config '\r\n+// import 'dotenv/config '\r\n import express from 'express'\r\n // import rotas from './rotas'\r\n \r\n const app = express()\r\n"
+                },
+                {
+                    "date": 1723639971901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+// import 'dotenv/config '\r\n+import express from 'express'\r\n+// import rotas from './rotas'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\r\n+\r\n+\r\n+\r\n+app.use(rotas)\r\n+\r\n+app.listen(process.env.PORT, () => {\r\n+    console.log('Servidor inicializado!')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723639983672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+// import 'dotenv/config '\r\n+import express from 'express'\r\n+import rotas from './rotas'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\r\n+\r\n+\r\n+\r\n+app.use(rotas)\r\n+\r\n+app.listen(process.env.PORT, () => {\r\n+    console.log('Servidor inicializado!')\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723640214490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import 'dotenv/config'\r\n+import express from 'express'\r\n+import rotas from './rotas'\r\n+\r\n+const app = express()\r\n+\r\n+app.use(express.json())\r\n+\r\n+app.use(rotas)\r\n+\r\n+app.listen(process.env.PORT, () => {\r\n+    console.log('Servidor inicializado!')\r\n+})\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1723638617135,

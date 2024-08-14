@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/rotas.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1723639260035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1723639967642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { Router } from 'express'\r\n \r\n const rotas = Router()\r\n \r\n-rotas.get('/', (req, res) => {\r\n+app.get('/', (req, res) => {\r\n     res.json('OK')\r\n })\r\n-\r\n export default rotas\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723639990642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Router } from 'express'\r\n \r\n const rotas = Router()\r\n \r\n-app.get('/', (req, res) => {\r\n+rotas.get('/', (req, res) => {\r\n     res.json('OK')\r\n })\r\n export default rotas\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1723640017036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,5 +4,6 @@\n \r\n rotas.get('/', (req, res) => {\r\n     res.json('OK')\r\n })\r\n+\r\n export default rotas\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1723639260035,
+            "name": "Commit-0",
+            "content": "import { Router } from 'express'\r\n\r\nconst rotas = Router()\r\n\r\nrotas.get('/', (req, res) => {\r\n    res.json('OK')\r\n})\r\n\r\nexport default rotas"
+        }
+    ]
+}
